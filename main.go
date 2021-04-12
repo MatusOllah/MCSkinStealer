@@ -39,7 +39,7 @@ func CreateForm() {
 	btnSkin.OnClick(func(ev ui.Event) {
 		fileUrl := "https://minotar.net/skin/" + playerInput.Title()
 
-		err := downloader.DownloadFile("skin_"+playerInput.Title()+".png", fileUrl)
+		err := DownloadFile("skin_"+playerInput.Title()+".png", fileUrl)
 
 		if err != nil {
 			ui.CreateAlertDialog("Chyba", "Chyba sťahovania súboru.", "OK")
@@ -48,7 +48,7 @@ func CreateForm() {
 
 	btnBody.OnClick(func(ev ui.Event) {
 		fileUrl := "https://minotar.net/body/" + playerInput.Title() + "/100.png"
-		err := downloader.DownloadFile("body_"+playerInput.Title()+".png", fileUrl)
+		err := DownloadFile("body_"+playerInput.Title()+".png", fileUrl)
 
 		if err != nil {
 			ui.CreateAlertDialog("Chyba", "Chyba sťahovania súboru.", "OK")
